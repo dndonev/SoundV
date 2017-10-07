@@ -6,5 +6,7 @@ namespace SoundV.ViewModels
 {
     class ClockTimeViewModel
     {
+        public DateTime currentTime;
+        public string Title = "Clock Time";
     }
 }

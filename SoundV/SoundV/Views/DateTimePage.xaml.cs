@@ -10,11 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace SoundV.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class DateTimeVPage : ContentPage
+	public partial class DateTimePage : ContentPage
 	{
-		public DateTimeVPage ()
+		public DateTimePage ()
 		{
-			InitializeComponent ();
+			InitializeComponent();
 		}
 	}
 }

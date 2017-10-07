@@ -1,10 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SoundV.Views.ClockTimePage">
+             x:Class="SoundV.Views.ClockTimePage"
+             xmlns:vm="clr-namespace:SoundV.ViewModels;">
+    <ContentPage.BindingContext>
+        <vm:ClockTimeViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
+
+        <StackLayout x:Name="ClockTimeWrapper" WidthRequest="600" HeightRequest="600">
+            <Button x:Name="ClockTime" Clicked="ClockTime_Requested"
+                    TextColor="Black"
+                    BackgroundColor="Wheat"
+                    Margin="10"
+                    FontSize="Large"
+                    Text="Tell me the time!"/>
+            
+            <Label Margin="10" FontSize="Large" Text="{Binding currentTime}"></Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

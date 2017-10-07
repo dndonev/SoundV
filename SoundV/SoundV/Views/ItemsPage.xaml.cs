@@ -4,6 +4,7 @@ using SoundV.Models;
 using SoundV.ViewModels;
 
 using Xamarin.Forms;
+using Plugin.TextToSpeech;
 
 namespace SoundV.Views
 {
@@ -30,10 +31,12 @@ namespace SoundV.Views
 			ItemsListView.SelectedItem = null;
 		}
 
-		async void AddItem_Clicked(object sender, EventArgs e)
+		async void Clock_Clicked(object sender, EventArgs e)
 		{
-			await Navigation.PushAsync(new NewItemPage());
-		}
+            await Navigation.PushAsync(new ClockTimePage());
+            await CrossTextToSpeech.Current.Speak("Clock Page");
+            
+        }
 
 		protected override void OnAppearing()
 		{

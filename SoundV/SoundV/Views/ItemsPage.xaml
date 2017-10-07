@@ -4,12 +4,16 @@
              x:Class="SoundV.Views.ItemsPage"
               Title="{Binding Title}"
              x:Name="BrowseItemsPage">
-  <ContentPage.ToolbarItems>
-  	<ToolbarItem Text="Add Item" Clicked="AddItem_Clicked" />
+    <StackLayout>
+        <Button Clicked="Clock_Clicked" Text="GO TO CLOCK" FontSize="Large"/>
+    </StackLayout>
+    <ContentPage.ToolbarItems>
+  	<ToolbarItem Text="Add Item" Clicked="Clock_Clicked" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
-    <StackLayout>
-      <ListView x:Name="ItemsListView"
+        
+        <StackLayout>
+            <ListView x:Name="ItemsListView"
 				ItemsSource="{Binding Items}"
                 VerticalOptions="FillAndExpand"
                 HasUnevenRows="true"
@@ -35,6 +39,7 @@
           </DataTemplate>
         </ListView.ItemTemplate>
       </ListView>
+            
     </StackLayout> 
   </ContentPage.Content>
 </ContentPage>

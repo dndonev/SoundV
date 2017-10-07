@@ -56,8 +56,8 @@
       <DependentUpon>ClockTimePage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\DateTimeVPage.xaml.cs">
-      <DependentUpon>DateTimeVPage.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DateTimePage.xaml.cs">
+      <DependentUpon>DateTimePage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\ItemsPage.xaml.cs">
@@ -89,6 +89,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Styles\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
     <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
   </ItemGroup>
@@ -117,7 +118,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DateTimeVPage.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DateTimePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
