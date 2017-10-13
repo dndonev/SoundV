@@ -21,7 +21,7 @@ namespace SoundV
             {
                 Children =
                 {
-                    new NavigationPage(new ItemsPage())
+                    new NavigationPage(new Home())
                     {
                         Title = "Browse",
                         Icon = Device.OnPlatform<string>("tab_feed.png",null,null)

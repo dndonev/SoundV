@@ -8,15 +8,21 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
 
-        <StackLayout x:Name="ClockTimeWrapper" WidthRequest="600" HeightRequest="600">
-            <Button x:Name="ClockTime" Clicked="ClockTime_Requested"
-                    TextColor="Black"
-                    BackgroundColor="Wheat"
-                    Margin="10"
-                    FontSize="Large"
-                    Text="Tell me the time!"/>
-            
-            <Label Margin="10" FontSize="Large" Text="{Binding currentTime}"></Label>
+        <StackLayout BackgroundColor="Black" HeightRequest="600">
+           
+                <Button x:Name="ClockTime"  Clicked="ClockTime_Requested"
+                                            BorderWidth="2"
+                                            BorderColor="White"
+                                            HeightRequest="300"
+                                            TextColor="LightYellow"
+                                            BackgroundColor="Black"
+                                            Margin="10"
+                                            FontSize="48"
+                                            Text="Tell me the time!"/>
+
+                <Label Margin="10" BackgroundColor="White" Style="{StaticResource Primary}" FontSize="Large" Text="{Binding currentTime}"></Label>
+
+       
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

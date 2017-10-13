@@ -26,6 +26,7 @@ namespace SoundV.Views
         {
             base.OnAppearing();
             viewModel.currentTime = DateTime.Now;
+            CrossTextToSpeech.Current.Speak("Welcome to Clock Page");
         }
 
         async void ClockTime_Requested(object sender, EventArgs e)
@@ -34,6 +35,11 @@ namespace SoundV.Views
             requestedTime = viewModel.currentTime.ToShortTimeString();
             await CrossTextToSpeech.Current.Speak(requestedTime);
          
+        }
+
+        private void OpenNewPage(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new DateTimePage());
         }
     }
 }
