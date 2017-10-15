@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SoundV.Views.ClockTimePage"
+             Title="Clock"
              xmlns:vm="clr-namespace:SoundV.ViewModels;">
     <ContentPage.BindingContext>
         <vm:ClockTimeViewModel />
@@ -12,7 +13,7 @@
            
                 <Button x:Name="ClockTime"  Clicked="ClockTime_Requested"
                                             BorderWidth="2"
-                                            BorderColor="White"
+                                            BorderColor="Pink"
                                             HeightRequest="300"
                                             TextColor="LightYellow"
                                             BackgroundColor="Black"

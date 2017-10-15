@@ -17,21 +17,10 @@ namespace SoundV
 
 		public static void SetMainPage()
 		{
-            Current.MainPage = new TabbedPage
+            Current.MainPage = new NavigationPage(new Home())
             {
-                Children =
-                {
-                    new NavigationPage(new Home())
-                    {
-                        Title = "Browse",
-                        Icon = Device.OnPlatform<string>("tab_feed.png",null,null)
-                    },
-                    new NavigationPage(new AboutPage())
-                    {
-                        Title = "About",
-                        Icon = Device.OnPlatform<string>("tab_about.png",null,null)
-                    },
-                }
+                Title = "Browse",
+                Icon = Device.OnPlatform<string>("tab_feed.png", null, null)
             };
         }
 	}

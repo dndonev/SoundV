@@ -16,9 +16,9 @@ namespace SoundV.Views
         public Home()
 		{
 			InitializeComponent();
-
 			BindingContext = viewModel = new ItemsViewModel();
-		}
+            Title = "Home";
+        }
 
 		async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
 		{
@@ -38,6 +38,7 @@ namespace SoundV.Views
             if (tapCount > 2)
             {
                 await Navigation.PushAsync(new ClockTimePage());
+                Title = "Clock";
             }
             else
             {
