@@ -1,10 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SoundV.Views.CallPage">
+             x:Class="SoundV.Views.CallPage"
+             Title="Call"
+             xmlns:vm="clr-namespace:SoundV.ViewModels;">
+    <ContentPage.BindingContext>
+        <vm:CallViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
+        <StackLayout BackgroundColor="Black" HeightRequest="600">
+            <Button Clicked="EmergencyCall_Requested"
+                                                BorderWidth="2"
+                                                BorderColor="Pink"
+                                                HeightRequest="300"
+                                                TextColor="LightYellow"
+                                                BackgroundColor="Black"
+                                                Margin="10"
+                                                FontSize="48"
+                                                Text="Emergency call"/>
+
         </StackLayout>
+        
+        <!--<StackLayout BackgroundColor="White" HeightRequest="400">
+            <Label Text="PHOTO TO BE ADDED" 
+                   FontSize="Large" 
+                   FontAttributes="Bold"  
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center"></Label>
+        </StackLayout>-->
     </ContentPage.Content>
 </ContentPage>

@@ -8,22 +8,17 @@
         <vm:ClockTimeViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Content>
-
         <StackLayout BackgroundColor="Black" HeightRequest="600">
-           
-                <Button x:Name="ClockTime"  Clicked="ClockTime_Requested"
-                                            BorderWidth="2"
-                                            BorderColor="Pink"
-                                            HeightRequest="300"
-                                            TextColor="LightYellow"
-                                            BackgroundColor="Black"
-                                            Margin="10"
-                                            FontSize="48"
-                                            Text="Tell me the time!"/>
+            <Button x:Name="ClockTime"  Clicked="ClockTime_Requested"
+                                                BorderWidth="2"
+                                                BorderColor="Pink"
+                                                HeightRequest="300"
+                                                TextColor="LightYellow"
+                                                BackgroundColor="Black"
+                                                Margin="10"
+                                                FontSize="48"
+                                                Text="Tell me the time!"/>
 
-                <Label Margin="10" BackgroundColor="White" Style="{StaticResource Primary}" FontSize="Large" Text="{Binding currentTime}"></Label>
-
-       
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

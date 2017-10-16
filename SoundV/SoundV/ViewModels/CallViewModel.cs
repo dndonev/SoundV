@@ -4,11 +4,11 @@ using System.Text;
 
 namespace SoundV.ViewModels
 {
-    class CallViewModel
+    class CallViewModel : BaseViewModel
     {
         public CallViewModel()
         {
-           
+            Title = "Call";
         }
     }
 }

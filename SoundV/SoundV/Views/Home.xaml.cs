@@ -38,7 +38,6 @@ namespace SoundV.Views
             if (tapCount > 2)
             {
                 await Navigation.PushAsync(new ClockTimePage());
-                Title = "Clock";
             }
             else
             {
@@ -46,7 +45,13 @@ namespace SoundV.Views
             }
         }
 
-		protected override void OnAppearing()
+        async void Call_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CallPage());
+        }
+
+
+        protected override void OnAppearing()
 		{
 			base.OnAppearing();
             
@@ -65,6 +70,11 @@ namespace SoundV.Views
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             CrossTextToSpeech.Current.Speak("Clock Page");
+        }
+
+        private async void Taxi_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TaxiPage());
         }
     }
 }

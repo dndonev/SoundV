@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Plugin.TextToSpeech;
+using SoundV.ViewModels;
+using Plugin.Messaging;
 
 namespace SoundV.Views
 {
@@ -14,7 +17,24 @@ namespace SoundV.Views
 	{
 		public CallPage ()
 		{
-			InitializeComponent ();
-		}
-	}
+			InitializeComponent();
+            BindingContext = new CallViewModel();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            CrossTextToSpeech.Current.Speak("Call page");
+        }
+
+        private void EmergencyCall_Requested()
+        {
+            var phoneDialer = CrossMessaging.Current.PhoneDialer;
+            if (phoneDialer.CanMakePhoneCall)
+            {
+                phoneDialer.MakePhoneCall("112", "Emergency Call 112");
+            }
+        }
+
+    }
 }

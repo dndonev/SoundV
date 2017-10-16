@@ -6,6 +6,8 @@
              x:Name="Home">
     <StackLayout>
             <Button x:Name="GoToClockPageBtn" Clicked="Clock_Clicked" Text="GO TO CLOCK" FontSize="Large"/>
+            <Button x:Name="GoToCallPageBtn" Clicked="Call_Clicked" Text="EMERGENCY CALL" FontSize="Large"/>
+            <Button x:Name="GoToTaxiPageBtn" Clicked="Taxi_Clicked" Text="TAXI" FontSize="Large"/>
     </StackLayout>
 
   	<!--<ToolbarItem Text="Add Item" Clicked="Clock_Clicked" />-->

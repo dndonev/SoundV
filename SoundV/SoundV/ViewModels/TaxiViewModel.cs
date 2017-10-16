@@ -6,5 +6,6 @@ namespace SoundV.ViewModels
 {
     class TaxiViewModel
     {
+        public int ТaxiPhoneNumber { get; set; } = 91119;
     }
 }
