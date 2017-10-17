@@ -8,15 +8,33 @@
     
     <ContentPage.Content>
         <StackLayout BackgroundColor="Black" HeightRequest="600">
-            <Button Clicked="Taxi_Requested"
-                                                BorderWidth="2"
-                                                BorderColor="Pink"
-                                                HeightRequest="300"
-                                                TextColor="LightYellow"
-                                                BackgroundColor="Black"
-                                                Margin="10"
-                                                FontSize="48"
-                                                Text="TAXI"/>
+            <StackLayout BackgroundColor="White"
+                         HeightRequest="300">
+                <Button Clicked="Navigate_Down" 
+                                                    HeightRequest="300"
+                                                    TextColor="Black"
+                                                    BackgroundColor="Wheat"
+                                                    Margin="10"
+                                                    FontSize="48"
+                                                    Text="TAXI COMPANY"/>
+            </StackLayout>
+            
+            
+            
+            
+            <StackLayout>
+                <Button Clicked="Taxi_Requested"
+                                                    BorderWidth="2"
+                                                    BorderColor="Pink"
+                                                    HeightRequest="300"
+                                                    TextColor="LightYellow"
+                                                    BackgroundColor="Black"
+                                                    Margin="10"
+                                                    FontSize="48"
+                                                    Text="TAXI"/>
+            </StackLayout>
+            
+            
 
         </StackLayout>
     </ContentPage.Content>

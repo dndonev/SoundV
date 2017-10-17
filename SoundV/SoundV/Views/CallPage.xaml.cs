@@ -27,6 +27,12 @@ namespace SoundV.Views
             CrossTextToSpeech.Current.Speak("Call page");
         }
 
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            Navigation.PopToRootAsync();
+        }
+
         private void EmergencyCall_Requested()
         {
             var phoneDialer = CrossMessaging.Current.PhoneDialer;
